@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-div{
+    height: 100px;
+    background-color: rgb(143, 143, 206);
+}
+
+.category-div{
+    height: 60px;
+    background-color: rgb(151, 225, 151);
+}
+
+.third-div{
+    height: 600px;
+    margin: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: rgb(114, 207, 203);
+}
+
+.fourth-div{
+    height: 200px;
+    margin: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: rgb(87, 145, 101);
+}
+
+.fifth-div{
+    height: 200px;
+    margin: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: rgb(201, 70, 203);
+}
+
+.sixth-div{
+    height: 200px;
+    margin: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: rgb(70, 72, 117);
+}
+
+.seventh-div{
+    height: 400px;
+    margin: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: rgb(125, 113, 125);
+}
+
+.seventh-heading{
+    margin: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.eighth-div{
+    height: 250px;
+    margin: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: rgb(141, 172, 109);
+}
+
+.nineth-div{
+    height: 250px;
+    margin: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: rgb(119, 185, 219);
+}
+
+.nineth-heading{
+    margin: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.tenth-div{
+    height: 200px;
+    margin: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: rgb(159, 36, 65);
+}
+
+.tenth-heading{
+    margin: 20px;
+    margin-left: 80px;
+    margin-right: 80px;   
+}
+
+.eleventh-div{
+    height: 100px;
+    margin: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: rgb(172, 109, 109);
+}
+
+.twelveth-div{
+    height: 100px;
+    background-color: rgb(75, 75, 210);
+}
+
+.thirteenth-div{
+    height: 100px;
+    background-color: rgb(104, 119, 105);
+}
+
+.fourteenth-div{
+    height: 100px;
+    background-color: rgb(54, 54, 76);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f7fa;
+  color: #1a1a1a;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
