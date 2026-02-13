@@ -5,118 +5,169 @@
 }
 
 .header-div{
-    height: 100px;
-    background-color: rgb(143, 143, 206);
+    height: 11vh;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(163, 163, 163);
+    border: 2px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(199, 196, 196);
 }
 
-.category-div{
-    height: 60px;
-    background-color: rgb(151, 225, 151);
+.header-logo{
+    height: 46px;
+    margin-left: 130px;
+    width: 150px;
 }
 
-.third-div{
-    height: 600px;
+.Search-container{
+    border: 3px solid rgba(13, 110, 253, 1);
+    border-radius: 9px;
+    height: 5.8vh;
+    width: 41vw;
+    display: flex;
+    overflow: hidden;
+    margin-left: 100px;
+
+}
+
+.search-input{
+    border: none;
+    width: 26vw;
+    outline: none;
+    padding: 10px;
+    font-size: 1.9vh;
+}
+
+.category{
+    border: none;
+    border-left: 2px solid rgba(13, 110, 253, 1);    
+    border-radius: 0px;
+    outline: none;
+    width: 9vw;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.search-btn{
+    border: none;
+    border-left: 2px solid rgba(13, 110, 253, 1);    
+    border-radius: 0px;
+    outline: none;
+    width: 7vw;
+    background-color: rgba(13, 110, 253, 1);
+    color: white;
+    font-size: 1.9vh;
+}
+
+.header-menu{
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+    margin-left: 180px;
+}
+
+.navbar-div{
+    height: 11vh;
+    background-color: rgb(255, 255, 255);
+    border: grey;
+    border: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.Section-Main-div{
+    height: 400px;
     margin: 20px;
     margin-left: 80px;
     margin-right: 80px;
     background-color: rgb(114, 207, 203);
 }
 
-.fourth-div{
-    height: 200px;
+.Section-Sale-div{
+    height: 240px;
     margin: 20px;
     margin-left: 80px;
     margin-right: 80px;
     background-color: rgb(87, 145, 101);
 }
 
-.fifth-div{
-    height: 200px;
+.Block_Items-Group-01-div{
+    height: 257px;
     margin: 20px;
     margin-left: 80px;
     margin-right: 80px;
     background-color: rgb(201, 70, 203);
 }
 
-.sixth-div{
-    height: 200px;
+.Block_Items-Group-02-div{
+    height: 257px;
     margin: 20px;
     margin-left: 80px;
     margin-right: 80px;
     background-color: rgb(70, 72, 117);
 }
 
-.seventh-div{
-    height: 400px;
+.Section-Inquiry-div{
+    height: 420px;
     margin: 20px;
     margin-left: 80px;
     margin-right: 80px;
     background-color: rgb(125, 113, 125);
 }
 
-.seventh-heading{
+.Section-Recomended-heading{
     margin: 20px;
     margin-left: 80px;
     margin-right: 80px;
 }
 
-.eighth-div{
-    height: 250px;
+.Section-Recomended-div{
+    height: 696px;
     margin: 20px;
     margin-left: 80px;
     margin-right: 80px;
     background-color: rgb(141, 172, 109);
 }
 
-.nineth-div{
-    height: 250px;
+.Section-Service-heading{
+    margin: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.Section-Service-div{
+    height: 256px;
     margin: 20px;
     margin-left: 80px;
     margin-right: 80px;
     background-color: rgb(119, 185, 219);
 }
 
-.nineth-heading{
+.Section-Country-heading{
     margin: 20px;
     margin-left: 80px;
     margin-right: 80px;
 }
 
-.tenth-div{
-    height: 200px;
+.Section-Country-div{
+    height: 138px;
     margin: 20px;
     margin-left: 80px;
     margin-right: 80px;
     background-color: rgb(159, 36, 65);
 }
 
-.tenth-heading{
+.Newsletter-heading{
     margin: 20px;
+    height: 190px;
     margin-left: 80px;
     margin-right: 80px;   
 }
 
-.eleventh-div{
-    height: 100px;
-    margin: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
-    background-color: rgb(172, 109, 109);
-}
-
-.twelveth-div{
-    height: 100px;
-    background-color: rgb(75, 75, 210);
-}
-
-.thirteenth-div{
-    height: 100px;
-    background-color: rgb(104, 119, 105);
-}
-
-.fourteenth-div{
-    height: 100px;
-    background-color: rgb(54, 54, 76);
+.Footer-div{
+    height: 324px;
+    background-color: rgb(205, 188, 192);
 }
 
 body {
