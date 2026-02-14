@@ -7,11 +7,10 @@
 .header-div{
     height: 11vh;
     background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(163, 163, 163);
     border: 2px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid rgb(199, 196, 196);
+    border-bottom: 1px solid rgb(222, 222, 222);
 }
 
 .header-logo{
@@ -68,20 +67,98 @@
 }
 
 .navbar-div{
-    height: 11vh;
+    height: 8vh;
     background-color: rgb(255, 255, 255);
     border: grey;
     border: 2px;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid rgb(222, 222, 222);
+    color: black;
+    font-size: 16px;
+}
+
+.navbar-menu-div{
+    display: flex;
+    margin-left: 80px;
+    column-gap: 30px;
+}
+
+.menu-logo{
+    height: 2.5vh;
+}
+
+.navbar-help{
+    border: none;   
+    border-radius: 0px;
+    outline: none;
+    width: 4vw;
+    margin-right: 4px;
+    margin-left: 4px;
+    font-size: 2vh;
+}
+
+.navbar-language{
+    border: none;   
+    border-radius: 0px;
+    outline: none;
+    width: 8vw;
+    margin-right: 4px;
+    margin-left: 440px;
+    font-size: 2vh;
+}
+
+.navbar-select-country{
+    border: none;   
+    border-radius: 0px;
+    outline: none;
+    width: 8vw;
+    margin-right: 4px;
+    margin-left: 30px;
+    font-size: 2vh;
 }
 
 .Section-Main-div{
-    height: 400px;
+    height: 51vh;
     margin: 20px;
     margin-left: 80px;
     margin-right: 80px;
-    background-color: rgb(114, 207, 203);
+    background-color: rgb(255, 255, 255);
+    border: 1.5px solid rgb(222, 222, 222);
+    border-radius: 4px;
+    display: flex;
+}
+
+.Section-Main-div-menu{
+    height: 48vh;
+    width: 25vw;
+    background-color: rgb(255, 255, 255);
+    margin-left: 12px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.Section-Main-div-banner{
+    height: 48vh;
+    width: 45vw;
+    margin-left: 12px;
+    margin-top: 10px;
+    background-image: url(assets/main-div-banner.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Section-Main-div-user-box-1{
+
+}
+
+.Section-Main-div-box-2{
+
+}
+
+.Section-Main-div-box-3{
+
 }
 
 .Section-Sale-div{
