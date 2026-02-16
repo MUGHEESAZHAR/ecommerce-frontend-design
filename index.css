@@ -4,350 +4,349 @@
   box-sizing: border-box;
 }
 
-.header-div{
-    height: 11vh;
-    background-color: rgb(255, 255, 255);
-    border: 2px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid rgb(222, 222, 222);
+.header-div {
+  height: 11vh;
+  background-color: rgb(255, 255, 255);
+  border: 2px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(222, 222, 222);
 }
 
-.header-logo{
-    height: 46px;
-    margin-left: 130px;
-    width: 150px;
+.header-logo {
+  height: 46px;
+  margin-left: 130px;
+  width: 150px;
 }
 
-.Search-container{
-    border: 3px solid rgba(13, 110, 253, 1);
-    border-radius: 9px;
-    height: 5.8vh;
-    width: 41vw;
-    display: flex;
-    overflow: hidden;
-    margin-left: 100px;
-
+.Search-container {
+  border: 3px solid rgba(13, 110, 253, 1);
+  border-radius: 9px;
+  height: 5.8vh;
+  width: 41vw;
+  display: flex;
+  overflow: hidden;
+  margin-left: 100px;
 }
 
-.search-input{
-    border: none;
-    width: 26vw;
-    outline: none;
-    padding: 10px;
-    font-size: 1.9vh;
+.search-input {
+  border: none;
+  width: 26vw;
+  outline: none;
+  padding: 10px;
+  font-size: 1.9vh;
 }
 
-.category{
-    border: none;
-    border-left: 2px solid rgba(13, 110, 253, 1);    
-    border-radius: 0px;
-    outline: none;
-    width: 9vw;
-    margin-right: 4px;
-    margin-left: 4px;
+.category {
+  border: none;
+  border-left: 2px solid rgba(13, 110, 253, 1);
+  border-radius: 0px;
+  outline: none;
+  width: 9vw;
+  margin-right: 4px;
+  margin-left: 4px;
 }
 
-.search-btn{
-    border: none;
-    border-left: 2px solid rgba(13, 110, 253, 1);    
-    border-radius: 0px;
-    outline: none;
-    width: 7vw;
-    background-color: rgba(13, 110, 253, 1);
-    color: white;
-    font-size: 1.9vh;
+.search-btn {
+  border: none;
+  border-left: 2px solid rgba(13, 110, 253, 1);
+  border-radius: 0px;
+  outline: none;
+  width: 7vw;
+  background-color: rgba(13, 110, 253, 1);
+  color: white;
+  font-size: 1.9vh;
 }
 
-.header-menu{
-    display: flex;
-    align-items: center;
-    column-gap: 25px;
-    margin-left: 180px;
+.header-menu {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+  margin-left: 180px;
 }
 
-.navbar-div{
-    height: 8vh;
-    background-color: rgb(255, 255, 255);
-    border: grey;
-    border: 2px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid rgb(222, 222, 222);
-    color: black;
-    font-size: 16px;
+.navbar-div {
+  height: 8vh;
+  background-color: rgb(255, 255, 255);
+  border: grey;
+  border: 2px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(222, 222, 222);
+  color: black;
+  font-size: 16px;
 }
 
-.navbar-menu-div{
-    display: flex;
-    margin-left: 80px;
-    column-gap: 30px;
+.navbar-menu-div {
+  display: flex;
+  margin-left: 80px;
+  column-gap: 30px;
 }
 
-.menu-logo{
-    height: 2.5vh;
+.menu-logo {
+  height: 2.5vh;
 }
 
-.navbar-help{
-    border: none;   
-    border-radius: 0px;
-    outline: none;
-    width: 4vw;
-    margin-right: 4px;
-    margin-left: 4px;
-    font-size: 2vh;
-    cursor: pointer;
+.navbar-help {
+  border: none;
+  border-radius: 0px;
+  outline: none;
+  width: 4vw;
+  margin-right: 4px;
+  margin-left: 4px;
+  font-size: 2vh;
+  cursor: pointer;
 }
 
-.navbar-language{
-    border: none;   
-    border-radius: 0px;
-    outline: none;
-    width: 8vw;
-    margin-right: 4px;
-    margin-left: 440px;
-    font-size: 2vh;
-    cursor: pointer;
+.navbar-language {
+  border: none;
+  border-radius: 0px;
+  outline: none;
+  width: 8vw;
+  margin-right: 4px;
+  margin-left: 440px;
+  font-size: 2vh;
+  cursor: pointer;
 }
 
-.navbar-select-country{
-    border: none;   
-    border-radius: 0px;
-    outline: none;
-    width: 8vw;
-    margin-right: 4px;
-    margin-left: 30px;
-    font-size: 2vh;
-    cursor: pointer;
+.navbar-select-country {
+  border: none;
+  border-radius: 0px;
+  outline: none;
+  width: 8vw;
+  margin-right: 4px;
+  margin-left: 30px;
+  font-size: 2vh;
+  cursor: pointer;
 }
 
-.Section-Main-div{
-    height: 53vh;
-    width: 86vw;
-    margin: 20px;
-    margin-left: 95px;
-    background-color: rgb(255, 255, 255);
-    border: 1.5px solid rgb(222, 222, 222);
-    border-radius: 8px;
-    display: flex;
+.Section-Main-div {
+  height: 53vh;
+  width: 86vw;
+  margin: 20px;
+  margin-left: 95px;
+  background-color: rgb(255, 255, 255);
+  border: 1.5px solid rgb(222, 222, 222);
+  border-radius: 8px;
+  display: flex;
 }
 
-.Section-Main-div-menu{
-    height: 48vh;
-    width: 22vw;
-    background-color: rgb(255, 255, 255);
-    margin-left: 12px;
-    margin-top: 18px;
-    font-size: 18px;
-    cursor: pointer;
+.Section-Main-div-menu {
+  height: 48vh;
+  width: 22vw;
+  background-color: rgb(255, 255, 255);
+  margin-left: 12px;
+  margin-top: 18px;
+  font-size: 18px;
+  cursor: pointer;
 }
 
-.Section-Main-div-banner{
-    height: 48vh;
-    width: 45vw;
-    margin-left: 12px;
-    margin-top: 17px;
-    background-image: url(assets/main-div-banner.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.Section-Main-div-banner {
+  height: 48vh;
+  width: 45vw;
+  margin-left: 12px;
+  margin-top: 17px;
+  background-image: url(assets/main-div-banner.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.Section-Main-div-banner-text-1{
-    margin-top: 50px;
-    margin-left: 40px;
-    font-size: 30px;
-    font-weight: 20px;
+.Section-Main-div-banner-text-1 {
+  margin-top: 50px;
+  margin-left: 40px;
+  font-size: 30px;
+  font-weight: 20px;
 }
 
-.Section-Main-div-banner-text-2{
-    margin-top: 3px;
-    margin-left: 40px;
-    font-size: 34px;
-    font-weight: bold;
+.Section-Main-div-banner-text-2 {
+  margin-top: 3px;
+  margin-left: 40px;
+  font-size: 34px;
+  font-weight: bold;
 }
 
-.Section-Main-div-banner-button{
-    height: 5.5vh;
-    width: 8vw;
-    background-color: rgb(255, 255, 255);
-    color: black;
-    border: none;
-    border-radius: 6px;
-    margin-top: 18px;
-    margin-left: 40px;
-    font-size: 17px;
-    cursor: pointer;
+.Section-Main-div-banner-button {
+  height: 5.5vh;
+  width: 8vw;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: none;
+  border-radius: 6px;
+  margin-top: 18px;
+  margin-left: 40px;
+  font-size: 17px;
+  cursor: pointer;
 }
 
-.Section-Main-div-user-box-1{
-    height: 19vh;
-    width: 15vw;
-    border-radius: 8px;
-    background-color: rgba(227, 240, 255, 1);
-    margin-top: 19px;
-    margin-left: 20px;
+.Section-Main-div-user-box-1 {
+  height: 19vh;
+  width: 15vw;
+  border-radius: 8px;
+  background-color: rgba(227, 240, 255, 1);
+  margin-top: 19px;
+  margin-left: 20px;
 }
 
-.box-1-avatar-logo{
-    height: 6.5vh;
-    margin-left: 14px;
-    margin-top: 14px;
+.box-1-avatar-logo {
+  height: 6.5vh;
+  margin-left: 14px;
+  margin-top: 14px;
 }
 
-.box-1-user-text{
-    margin-left: 14px;
-    margin-top: 20px;
-    font-size: 17px;
-    font-weight: 18px;
-    display: flex;
+.box-1-user-text {
+  margin-left: 14px;
+  margin-top: 20px;
+  font-size: 17px;
+  font-weight: 18px;
+  display: flex;
 }
 
-.main-box-1-div-1{
-    display: flex;
+.main-box-1-div-1 {
+  display: flex;
 }
 
-.main-box-1-join-button{
-    height: 4vh;
-    width: 13.4vw;
-    background-color: rgba(18, 127, 255, 1);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    margin-top: 10px;
-    margin-left: 13px;
-    cursor: pointer;
+.main-box-1-join-button {
+  height: 4vh;
+  width: 13.4vw;
+  background-color: rgba(18, 127, 255, 1);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-left: 13px;
+  cursor: pointer;
 }
 
-.main-box-1-login-button{
-    height: 4vh;
-    width: 13.4vw;
-    background-color: white;
-    color: rgba(18, 127, 255, 1);
-    border: 1px solid rgb(230, 230, 230);
-    border-radius: 8px;
-    margin-top: 4px;
-    margin-left: 13px;
-    cursor: pointer;
+.main-box-1-login-button {
+  height: 4vh;
+  width: 13.4vw;
+  background-color: white;
+  color: rgba(18, 127, 255, 1);
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 8px;
+  margin-top: 4px;
+  margin-left: 13px;
+  cursor: pointer;
 }
 
-.Section-Main-div-box-2{
-    height: 13vh;
-    width: 15vw;
-    border-radius: 8px;
-    background-color: rgba(243, 131, 50, 1);
-    margin-top: 10px;
-    margin-left: 20px;
-    display: block;
-    color: white;
-    padding-left: 15px;
-    padding-top: 15px;
-    line-height: 1.26;
-    word-spacing: 2px;
-    font-weight: 1px;
-    font-weight: lighter;
+.Section-Main-div-box-2 {
+  height: 13vh;
+  width: 15vw;
+  border-radius: 8px;
+  background-color: rgba(243, 131, 50, 1);
+  margin-top: 10px;
+  margin-left: 20px;
+  display: block;
+  color: white;
+  padding-left: 15px;
+  padding-top: 15px;
+  line-height: 1.26;
+  word-spacing: 2px;
+  font-weight: 1px;
+  font-weight: lighter;
 }
 
-.Section-Main-div-box-3{
-    height: 13vh;
-    width: 15vw;
-    border-radius: 8px;
-    background-color: rgba(85, 189, 195, 1);
-    margin-top: 10px;
-    margin-left: 20px;
-    display: block;
-    color: white;
-    padding-left: 15px;
-    padding-top: 15px;
-    line-height: 1.26;
-    word-spacing: 3px;
-    font-weight: lighter;
+.Section-Main-div-box-3 {
+  height: 13vh;
+  width: 15vw;
+  border-radius: 8px;
+  background-color: rgba(85, 189, 195, 1);
+  margin-top: 10px;
+  margin-left: 20px;
+  display: block;
+  color: white;
+  padding-left: 15px;
+  padding-top: 15px;
+  line-height: 1.26;
+  word-spacing: 3px;
+  font-weight: lighter;
 }
 
-.Section-Sale-div{
-    height: 240px;
-    margin: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
-    background-color: rgb(87, 145, 101);
+.Section-Sale-div {
+  height: 240px;
+  margin: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
+  background-color: rgb(87, 145, 101);
 }
 
-.Block_Items-Group-01-div{
-    height: 257px;
-    margin: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
-    background-color: rgb(201, 70, 203);
+.Block_Items-Group-01-div {
+  height: 257px;
+  margin: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
+  background-color: rgb(201, 70, 203);
 }
 
-.Block_Items-Group-02-div{
-    height: 257px;
-    margin: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
-    background-color: rgb(70, 72, 117);
+.Block_Items-Group-02-div {
+  height: 257px;
+  margin: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
+  background-color: rgb(70, 72, 117);
 }
 
-.Section-Inquiry-div{
-    height: 420px;
-    margin: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
-    background-color: rgb(125, 113, 125);
+.Section-Inquiry-div {
+  height: 420px;
+  margin: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
+  background-color: rgb(125, 113, 125);
 }
 
-.Section-Recomended-heading{
-    margin: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
+.Section-Recomended-heading {
+  margin: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
-.Section-Recomended-div{
-    height: 696px;
-    margin: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
-    background-color: rgb(141, 172, 109);
+.Section-Recomended-div {
+  height: 696px;
+  margin: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
+  background-color: rgb(141, 172, 109);
 }
 
-.Section-Service-heading{
-    margin: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
+.Section-Service-heading {
+  margin: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
-.Section-Service-div{
-    height: 256px;
-    margin: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
-    background-color: rgb(119, 185, 219);
+.Section-Service-div {
+  height: 256px;
+  margin: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
+  background-color: rgb(119, 185, 219);
 }
 
-.Section-Country-heading{
-    margin: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
+.Section-Country-heading {
+  margin: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
-.Section-Country-div{
-    height: 138px;
-    margin: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
-    background-color: rgb(159, 36, 65);
+.Section-Country-div {
+  height: 138px;
+  margin: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
+  background-color: rgb(159, 36, 65);
 }
 
-.Newsletter-heading{
-    margin: 20px;
-    height: 190px;
-    margin-left: 80px;
-    margin-right: 80px;   
+.Newsletter-heading {
+  margin: 20px;
+  height: 190px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
-.Footer-div{
-    height: 324px;
-    background-color: rgb(205, 188, 192);
+.Footer-div {
+  height: 324px;
+  background-color: rgb(205, 188, 192);
 }
 
 body {

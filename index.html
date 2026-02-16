@@ -1,205 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ecommerce Website</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce Website</title>
 
-  <!-- CSS (same folder) -->
-  <link rel="stylesheet" href="index.css"/>
-</head>
-<body>
+    <!-- CSS (same folder) -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-div">
+        <div>
+          <img
+            src="assets/logo-colored.png"
+            alt="Company Logo"
+            class="header-logo"
+          />
+        </div>
 
-  <header class="header">
-
-    <div class="header-div">
-       <div>
-        <img src="assets/logo-colored.png" alt="Company Logo" class="header-logo">
-       </div>
-
-       <div class="Search-container"> 
-        <input type="text" placeholder="Search" class="search-input">
+        <div class="Search-container">
+          <input type="text" placeholder="Search" class="search-input" />
           <select class="category">
             <option>All Categories</option>
             <option>Electronics</option>
             <option>Clothing</option>
             <option>Books</option>
-        </select>
+          </select>
 
-        <button class="search-btn">Search</button>
-       </div>
-
-       <div class="header-menu">
-            <a href="nextpage.html">
-              <img src="assets/Profile-logo.png" alt="Logo" >
-            </a>
-            <a href="nextpage.html">
-              <img src="assets/message-logo.png" alt="Logo" >
-            </a>
-            <a href="nextpage.html">
-              <img src="assets/orders-logo.png" alt="Logo" >
-            </a>
-            <a href="nextpage.html">
-              <img src="assets/cart-logo.png" alt="Logo" >
-            </a>
-       </div>
-
-    </div>
-
-    <div class="navbar-div">
-      <div class="navbar-menu-div">
-        <div>
-          <img src="assets/menu-logo.png" alt="menu-logo" class="menu-logo">
+          <button class="search-btn">Search</button>
         </div>
+
+        <div class="header-menu">
+          <a href="nextpage.html">
+            <img src="assets/Profile-logo.png" alt="Logo" />
+          </a>
+          <a href="nextpage.html">
+            <img src="assets/message-logo.png" alt="Logo" />
+          </a>
+          <a href="nextpage.html">
+            <img src="assets/orders-logo.png" alt="Logo" />
+          </a>
+          <a href="nextpage.html">
+            <img src="assets/cart-logo.png" alt="Logo" />
+          </a>
+        </div>
+      </div>
+
+      <div class="navbar-div">
+        <div class="navbar-menu-div">
+          <div>
+            <img src="assets/menu-logo.png" alt="menu-logo" class="menu-logo" />
+          </div>
           <p>All category</p>
           <p>Hot offers</p>
           <p>Gift boxes</p>
           <p>Projects</p>
           <p>Menu items</p>
-        <div>
-          <select class="navbar-help">
-            <option>Help</option>
-            <option>Details</option>
-            <option>Message</option>
-            <option>Report</option>
+          <div>
+            <select class="navbar-help">
+              <option>Help</option>
+              <option>Details</option>
+              <option>Message</option>
+              <option>Report</option>
+            </select>
+          </div>
+        </div>
+        <div class="navbar-language-div">
+          <select class="navbar-language">
+            <option>English, USD</option>
+            <option>French, Canada</option>
+            <option>Chinese, China</option>
+            <option>Spanish, Chile</option>
+          </select>
+        </div>
+        <div class="navbar-shipement-div">
+          <select class="navbar-select-country">
+            <option>
+              Ship to
+              <img src="assets/shipement-country-logo-france.png" alt="Logo" />
+            </option>
+            <option></option>
+            <option></option>
+            <option></option>
           </select>
         </div>
       </div>
-      <div class="navbar-language-div">
-        <select class="navbar-language">
-          <option>English, USD</option>
-          <option>French, Canada</option>
-          <option>Chinese, China</option>
-          <option>Spanish, Chile</option>
-        </select>
-      </div>
-      <div class="navbar-shipement-div">
-        <select class="navbar-select-country">
-          <option>Ship to <img src="assets/shipement-country-logo-france.png" alt="Logo" ></option>
-          <option></option>
-          <option></option>
-          <option></option>
-        </select>
-      </div>
-    </div>
 
-    <div class="Section-Main-div">
-      <div class="Section-Main-div-menu">
-        <p>Automobiles</p>
-        <p>Clothes and wear</p>
-        <p>Home interiors</p>
-        <p>Computer and tech</p>
-        <p>Tools, equipments</p>
-        <p>Sports and outdoor</p>
-        <p>Animal and pets</p>
-        <p>Machinery tools</p>
-        <p>More category</p>
-      </div>
-      <div class="Section-Main-div-banner">
-        <div class="Section-Main-div-banner-text">
-          <p class="Section-Main-div-banner-text-1">
-            Latest trending
-          </p>
-          <p class="Section-Main-div-banner-text-2">
-            Electronic items
-          </p>
-          <button class="Section-Main-div-banner-button">
-            Learn more
-          </button>
+      <div class="Section-Main-div">
+        <div class="Section-Main-div-menu">
+          <p>Automobiles</p>
+          <p>Clothes and wear</p>
+          <p>Home interiors</p>
+          <p>Computer and tech</p>
+          <p>Tools, equipments</p>
+          <p>Sports and outdoor</p>
+          <p>Animal and pets</p>
+          <p>Machinery tools</p>
+          <p>More category</p>
         </div>
-      </div>
-      <div>
-        <div class="Section-Main-div-user-box-1">
-          <div class="main-box-1-div-1">
-            <img src="assets/Avatar.logo.png" alt="Logo" class="box-1-avatar-logo">
-            <p class="box-1-user-text">
-              Hi, user <br> let's get started
+        <div class="Section-Main-div-banner">
+          <div class="Section-Main-div-banner-text">
+            <p class="Section-Main-div-banner-text-1">Latest trending</p>
+            <p class="Section-Main-div-banner-text-2">Electronic items</p>
+            <button class="Section-Main-div-banner-button">Learn more</button>
+          </div>
+        </div>
+        <div>
+          <div class="Section-Main-div-user-box-1">
+            <div class="main-box-1-div-1">
+              <img
+                src="assets/Avatar.logo.png"
+                alt="Logo"
+                class="box-1-avatar-logo"
+              />
+              <p class="box-1-user-text">
+                Hi, user <br />
+                let's get started
+              </p>
+            </div>
+            <button class="main-box-1-join-button">Join now</button>
+            <button class="main-box-1-login-button">Login</button>
+          </div>
+          <div class="Section-Main-div-box-2">
+            <p>
+              Get US $10 off <br />
+              with a new <br />
+              supplier
             </p>
           </div>
-            <button class="main-box-1-join-button">
-              Join now
-            </button>
-            <button class="main-box-1-login-button">
-              Login
-            </button>
-        </div>
-        <div class="Section-Main-div-box-2">
-          <p>
-            Get US $10 off <br>
-            with a new <br>
-            supplier
-          </p>
-        </div>
-        <div class="Section-Main-div-box-3">
-          <p>
-            Send quotes with <br>
-            supplier <br>
-            preferences
-          </p>
+          <div class="Section-Main-div-box-3">
+            <p>
+              Send quotes with <br />
+              supplier <br />
+              preferences
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="Section-Sale-div">
-    </div>
+      <div class="Section-Sale-div"></div>
 
-    <div class="Block_Items-Group-01-div">
-    </div>
+      <div class="Block_Items-Group-01-div"></div>
 
-    <div class="Block_Items-Group-02-div">
-    </div>
+      <div class="Block_Items-Group-02-div"></div>
 
-    <div class="Section-Inquiry-div">
-    </div>
+      <div class="Section-Inquiry-div"></div>
 
-    <h2 class="Section-Recomended-heading">Recommended items</h2>
+      <h2 class="Section-Recomended-heading">Recommended items</h2>
 
-    <div class="Section-Recomended-div">
-    </div>
+      <div class="Section-Recomended-div"></div>
 
-    <h2 class="Section-Service-heading">Our extra services</h2>
+      <h2 class="Section-Service-heading">Our extra services</h2>
 
-    <div class="Section-Service-div">
-    </div>
+      <div class="Section-Service-div"></div>
 
-    <h2 class="Section-Country-heading">Suppliers by region</h2>
+      <h2 class="Section-Country-heading">Suppliers by region</h2>
 
-    <div class="Section-Country-div">
-    </div>
+      <div class="Section-Country-div"></div>
 
-    <div class="Newsletter-div">
-    </div>
+      <div class="Newsletter-div"></div>
 
-    <div class="Footer-div">
-    </div>
+      <div class="Footer-div"></div>
+    </header>
 
-  </header>
+    <nav>
+      <!-- Navigation -->
+    </nav>
 
-  <nav>
-    <!-- Navigation -->
-  </nav>
+    <main>
+      <section class="hero">
+        <!-- Hero content -->
+      </section>
 
-  <main>
+      <section class="deals">
+        <!-- Deals -->
+      </section>
 
-    <section class="hero">
-      <!-- Hero content -->
-    </section>
+      <section class="products">
+        <!-- Products -->
+      </section>
+    </main>
 
-    <section class="deals">
-      <!-- Deals -->
-    </section>
+    <footer>
+      <!-- Footer -->
+    </footer>
 
-    <section class="products">
-      <!-- Products -->
-    </section>
-
-  </main>
-
-  <footer>
-    <!-- Footer -->
-  </footer>
-
-  <!-- JS (same folder) -->
-  <script src="index.js"></script>
-</body>
+    <!-- JS (same folder) -->
+    <script src="index.js"></script>
+  </body>
 </html>
