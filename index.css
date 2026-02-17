@@ -299,52 +299,145 @@
   display: flex;
 }
 
+.Section-Sale-deal-offer-div-h4{
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 30px;
+  font-weight: 600px;
+  line-height: 25px;
+}
+
+.Section-Sale-deal-offer-div-line{
+  font-size: 15px;
+  margin-left: 30px;
+  font-weight: 600px;
+  line-height: 25px;
+  color: rgba(139, 150, 165, 1);
+}
+
 .Section-Sale-deal-offer-div {
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
   width: 19vw;
 }
 
 .Section-Sale-deal-offer-timer-div {
   display: flex;
+  margin-left: 20px;
+  margin-top: 15px;
 }
 
 .Section-Sale-deal-offer-timer-div p {
-  background-color: #9ea3ab;
+  background-color: rgba(96, 96, 96, 1);
+  color: #fffefe;
   margin: 5px;
   width: 3.5vw;
   height: 6vh;
   align-content: center;
   text-align: center;
   border-radius: 5px;
+  font-weight: lighter;
+  font-size: 16px;
 }
 
-.Section-Sale-watch-div {
-  background-color: #7e91af;
+.Section-Sale-item-01-div {
+  background-color: #ffffff;
   width: 13.2vw;
+  border-left: 0.5px solid rgb(206, 206, 206);
+  overflow: hidden;
 }
 
-.Section-Sale-laptop-div {
-  background-color: aqua;
-  width: 13.2vw;
+.deal-offer-pic-01{
+  margin-top: 12px;
+  margin-left: 50px;
 }
 
-.Section-Sale-cammera-div {
-  background-color: bisque;
-  width: 13.2vw;
+.deal-offer-item-01-name{
+  text-align: center;
+  margin-top: 12px;
 }
 
-.Section-Sale-headphones-div {
-  background-color: #e09292;
-  width: 13.2vw;
+.deal-offer-items-discount{
+  margin-top: 10px;
+  margin-left: 67px;
+  background-color: rgba(255, 227, 227, 1);
+  color: rgba(235, 0, 27, 1);
+  width: 4vw;
+  height: 3.5vh;
+  border-radius: 12px;
+  text-align: center;
+  padding-top: 5px;
 }
 
-.Section-Sale-mobiles-div {
-  background-color: #7e91af;
+.Section-Sale-item-02-div {
+  background-color: rgb(255, 255, 255);
   width: 13.2vw;
+  border-left: 0.5px solid rgb(206, 206, 206);
+  overflow: hidden;
+}
+
+.deal-offer-pic-02{
+  margin-top: 22px;
+  margin-left: 50px;
+}
+
+.deal-offer-item-02-name{
+  text-align: center;
+  margin-top: 24px;
+}
+
+.Section-Sale-item-03-div {
+  background-color: rgb(255, 255, 255);
+  width: 13.2vw;
+  border-left: 0.5px solid rgb(206, 206, 206);
+  overflow: hidden;
+}
+
+.deal-offer-pic-03{
+  margin-top: 26px;
+  margin-left: 50px;
+}
+
+.deal-offer-item-03-name{
+  text-align: center;
+  margin-top: 27px;
+}
+
+.Section-Sale-item-04-div {
+  background-color: #ffffff;
+  width: 13.2vw;
+  border-left: 0.5px solid rgb(206, 206, 206);
+  overflow: hidden;
+}
+
+.deal-offer-pic-04{
+  margin-top: 11px;
+  margin-left: 50px;
+}
+
+.deal-offer-item-04-name{
+  text-align: center;
+  margin-top: 07px;
+}
+
+.Section-Sale-item-05-div {
+  background-color: #ffffff;
+  width: 13.2vw;
+  border-left: 0.5px solid rgb(206, 206, 206);
+  overflow: hidden;
+}
+
+.deal-offer-pic-05{
+  margin-top: 16px;
+  margin-left: 50px;
+}
+
+.deal-offer-item-05-name{
+  text-align: center;
+  margin-top: 06px;
 }
 
 .Block-Items-Group-01-div {
-  height: 42vh;
+  height: 39vh;
   width: 85.2vw;
   margin: 20px;
   margin-left: 106px;
@@ -356,7 +449,19 @@
 
 .Block-Items-Group-01-homeoutdoor-div {
   background-color: #7e91af;
-  width: 17vw;
+  width: 19vw;
+  background-image: url(assets/home-and-outdoor.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Block-Items-Group-01-homeoutdoor-div-text{
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: 30px;
+  font-weight: 600px;
+  line-height: 25px;
 }
 
 .Block-Items-Group-01-homeoutdoor-source-button {
@@ -366,8 +471,8 @@
   color: black;
   border: none;
   border-radius: 6px;
-  margin-top: 18px;
-  margin-left: 40px;
+  margin-top: 28px;
+  margin-left: 30px;
   font-size: 14px;
   cursor: pointer;
 }
@@ -379,25 +484,25 @@
 
 .Group-01-line-01-item-01 {
   height: 21vh;
-  width: 17.02vw;
+  width: 14vw;
   background-color: #9ea3ab;
 }
 
 .Group-01-line-01-item-02 {
   height: 21vh;
-  width: 17.02vw;
+  width: 14vw;
   background-color: aqua;
 }
 
 .Group-01-line-01-item-03 {
   height: 21vh;
-  width: 17.02vw;
+  width: 14vw;
   background-color: #e09292;
 }
 
 .Group-01-line-01-item-04 {
   height: 21vh;
-  width: 17.02vw;
+  width: 14vw;
   background-color: #dca2a2;
 }
 
@@ -408,25 +513,25 @@
 
 .Group-01-line-02-item-01 {
   height: 21vh;
-  width: 17.02vw;
+  width: 14vw;
   background-color: #939598;
 }
 
 .Group-01-line-02-item-02 {
   height: 21vh;
-  width: 17.02vw;
+  width: 14vw;
   background-color: #a97a7a;
 }
 
 .Group-01-line-02-item-03 {
   height: 21vh;
-  width: 17.02vw;
+  width: 14vw;
   background-color: #cfc7c7;
 }
 
 .Group-01-line-02-item-04 {
   height: 21vh;
-  width: 17.02vw;
+  width: 14vw;
 }
 
 .Block-Items-Group-02-div {
@@ -442,7 +547,19 @@
 
 .Block-Items-Group-02-Gadgets-div {
   background-color: #7e91af;
-  width: 17vw;
+  width: 19vw;
+  background-image: url(assets/consumer-gadgets.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Block-Items-Group-02-Gadgets-div-text{
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: 30px;
+  font-weight: 600px;
+  line-height: 25px;
 }
 
 .Block-Items-Group-02-Gadgets-button {
@@ -452,8 +569,8 @@
   color: black;
   border: none;
   border-radius: 6px;
-  margin-top: 18px;
-  margin-left: 40px;
+  margin-top: 28px;
+  margin-left: 30px;
   font-size: 14px;
   cursor: pointer;
 }
@@ -465,22 +582,22 @@
 
 .Group-02-line-01-item-01 {
   height: 21vh;
-  width: 17.02vw;
+  width: 14vw;
 }
 
 .Group-02-line-01-item-02 {
   height: 21vh;
-  width: 17.02vw;
+  width: 14vw;
 }
 
 .Group-02-line-01-item-03 {
   height: 21vh;
-  width: 17.02vw;
+  width: 14vw;
 }
 
 .Group-02-line-01-item-04 {
   height: 21vh;
-  width: 17.02vw;
+  width: 14vw;
 }
 
 .Block-Items-Group-02-line-02-div {
@@ -490,22 +607,22 @@
 
 .Group-02-line-02-item-01 {
   height: 21vh;
-  width: 17.02vw;
+  width: 14vw;
 }
 
 .Group-02-line-02-item-02 {
   height: 21vh;
-  width: 17.02vw;
+  width: 14vw;
 }
 
 .Group-02-line-02-item-03 {
   height: 21vh;
-  width: 17.02vw;
+  width: 14vw;
 }
 
 .Group-02-line-02-item-04 {
   height: 21vh;
-  width: 17.02vw;
+  width: 14vw;
 }
 
 .Section-Inquiry-div {
