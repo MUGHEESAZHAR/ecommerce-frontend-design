@@ -15,7 +15,7 @@
 
 .header-logo {
   height: 46px;
-  margin-left: 95px;
+  margin-left: 107px;
   width: 150px;
 }
 
@@ -79,7 +79,7 @@
 
 .navbar-menu-div {
   display: flex;
-  margin-left: 100px;
+  margin-left: 108px;
   column-gap: 30px;
 }
 
@@ -124,7 +124,7 @@
   height: 53vh;
   width: 85.2vw;
   margin: 20px;
-  margin-left: 95px;
+  margin-left: 106px;
   background-color: rgb(255, 255, 255);
   border: 1.5px solid rgb(222, 222, 222);
   border-radius: 8px;
@@ -289,27 +289,223 @@
 }
 
 .Section-Sale-div {
-  height: 240px;
+  height: 29vh;
+  width: 85.2vw;
   margin: 20px;
-  margin-left: 80px;
-  margin-right: 80px;
-  background-color: rgb(87, 145, 101);
+  margin-left: 106px;
+  background-color: rgb(255, 255, 255);
+  border: 1.5px solid rgb(222, 222, 222);
+  border-radius: 8px;
+  display: flex;
 }
 
-.Block_Items-Group-01-div {
-  height: 257px;
-  margin: 20px;
-  margin-left: 80px;
-  margin-right: 80px;
-  background-color: rgb(201, 70, 203);
+.Section-Sale-deal-offer-div {
+  background-color: aliceblue;
+  width: 19vw;
 }
 
-.Block_Items-Group-02-div {
-  height: 257px;
+.Section-Sale-deal-offer-timer-div {
+  display: flex;
+}
+
+.Section-Sale-deal-offer-timer-div p {
+  background-color: #9ea3ab;
+  margin: 5px;
+  width: 3.5vw;
+  height: 6vh;
+  align-content: center;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.Section-Sale-watch-div {
+  background-color: #7e91af;
+  width: 13.2vw;
+}
+
+.Section-Sale-laptop-div {
+  background-color: aqua;
+  width: 13.2vw;
+}
+
+.Section-Sale-cammera-div {
+  background-color: bisque;
+  width: 13.2vw;
+}
+
+.Section-Sale-headphones-div {
+  background-color: #e09292;
+  width: 13.2vw;
+}
+
+.Section-Sale-mobiles-div {
+  background-color: #7e91af;
+  width: 13.2vw;
+}
+
+.Block-Items-Group-01-div {
+  height: 42vh;
+  width: 85.2vw;
   margin: 20px;
-  margin-left: 80px;
-  margin-right: 80px;
-  background-color: rgb(70, 72, 117);
+  margin-left: 106px;
+  background-color: rgb(255, 255, 255);
+  border: 1.5px solid rgb(222, 222, 222);
+  border-radius: 8px;
+  display: flex;
+}
+
+.Block-Items-Group-01-homeoutdoor-div {
+  background-color: #7e91af;
+  width: 17vw;
+}
+
+.Block-Items-Group-01-homeoutdoor-source-button {
+  height: 5vh;
+  width: 7vw;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: none;
+  border-radius: 6px;
+  margin-top: 18px;
+  margin-left: 40px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.Block-Items-Group-01-line-01-div {
+  background-color: #cfc7c7;
+  display: flex;
+}
+
+.Group-01-line-01-item-01 {
+  height: 21vh;
+  width: 17.02vw;
+  background-color: #9ea3ab;
+}
+
+.Group-01-line-01-item-02 {
+  height: 21vh;
+  width: 17.02vw;
+  background-color: aqua;
+}
+
+.Group-01-line-01-item-03 {
+  height: 21vh;
+  width: 17.02vw;
+  background-color: #e09292;
+}
+
+.Group-01-line-01-item-04 {
+  height: 21vh;
+  width: 17.02vw;
+  background-color: #dca2a2;
+}
+
+.Block-Items-Group-01-line-02-div {
+  background-color: #857f7f;
+  display: flex;
+}
+
+.Group-01-line-02-item-01 {
+  height: 21vh;
+  width: 17.02vw;
+  background-color: #939598;
+}
+
+.Group-01-line-02-item-02 {
+  height: 21vh;
+  width: 17.02vw;
+  background-color: #a97a7a;
+}
+
+.Group-01-line-02-item-03 {
+  height: 21vh;
+  width: 17.02vw;
+  background-color: #cfc7c7;
+}
+
+.Group-01-line-02-item-04 {
+  height: 21vh;
+  width: 17.02vw;
+}
+
+.Block-Items-Group-02-div {
+  height: 42vh;
+  width: 85.2vw;
+  margin: 20px;
+  margin-left: 106px;
+  background-color: rgb(255, 255, 255);
+  border: 1.5px solid rgb(222, 222, 222);
+  border-radius: 8px;
+  display: flex;
+}
+
+.Block-Items-Group-02-Gadgets-div {
+  background-color: #7e91af;
+  width: 17vw;
+}
+
+.Block-Items-Group-02-Gadgets-button {
+  height: 5vh;
+  width: 7vw;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: none;
+  border-radius: 6px;
+  margin-top: 18px;
+  margin-left: 40px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.Block-Items-Group-02-line-01-div {
+  background-color: #cfc7c7;
+  display: flex;
+}
+
+.Group-02-line-01-item-01 {
+  height: 21vh;
+  width: 17.02vw;
+}
+
+.Group-02-line-01-item-02 {
+  height: 21vh;
+  width: 17.02vw;
+}
+
+.Group-02-line-01-item-03 {
+  height: 21vh;
+  width: 17.02vw;
+}
+
+.Group-02-line-01-item-04 {
+  height: 21vh;
+  width: 17.02vw;
+}
+
+.Block-Items-Group-02-line-02-div {
+  background-color: #857f7f;
+  display: flex;
+}
+
+.Group-02-line-02-item-01 {
+  height: 21vh;
+  width: 17.02vw;
+}
+
+.Group-02-line-02-item-02 {
+  height: 21vh;
+  width: 17.02vw;
+}
+
+.Group-02-line-02-item-03 {
+  height: 21vh;
+  width: 17.02vw;
+}
+
+.Group-02-line-02-item-04 {
+  height: 21vh;
+  width: 17.02vw;
 }
 
 .Section-Inquiry-div {
