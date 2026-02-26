@@ -316,6 +316,15 @@ ul {
   border: 1px solid #eee;
 }
 
+.block-1-group-1-item-pics{
+  object-fit: cover;
+  max-height: 4rem;
+  min-height: 4rem;
+  margin-left: 140px;
+  margin-top: 0px;
+  margin-bottom: 0;
+}
+
 /* ================= BLOCK GROUP 02 ================= */
 
 .Block-Items-Group-02-div {
