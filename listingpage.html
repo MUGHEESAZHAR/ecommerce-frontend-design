@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Listing - Ecommerce</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f5f5f5; }
+
+    /* ── TOP NAVBAR ─────────────────────────────── */
+    .top-navbar { background:#fff; border-bottom:1px solid #e8e8e8; padding:10px 24px; }
+    .logo-box {
+      background:#1677ff; border-radius:10px; width:38px; height:38px;
+      display:flex; align-items:center; justify-content:center;
+      color:#fff; font-size:18px; flex-shrink:0;
+    }
+    .brand-name { font-size:1.3rem; font-weight:700; color:#1677ff; margin-left:8px; text-decoration:none; }
+    .search-wrapper { display:flex; border:1.5px solid #d9d9d9; border-radius:6px; overflow:hidden; }
+    .search-wrapper input { flex:1; border:none; outline:none; padding:8px 14px; font-size:0.9rem; color:#555; }
+    .search-wrapper .category-select {
+      border:none; border-left:1.5px solid #d9d9d9; background:#fff;
+      padding:8px 10px; font-size:0.85rem; color:#333; cursor:pointer; outline:none; min-width:130px;
+    }
+    .search-wrapper .btn-search {
+      background:#1677ff; color:#fff; border:none; padding:8px 22px;
+      font-size:0.9rem; font-weight:500; cursor:pointer;
+    }
+    .top-icons { display:flex; gap:22px; align-items:center; }
+    .top-icons .icon-item {
+      display:flex; flex-direction:column; align-items:center;
+      color:#555; font-size:0.7rem; cursor:pointer; text-decoration:none; gap:2px;
+    }
+    .top-icons .icon-item i { font-size:1.25rem; color:#666; }
+    .top-icons .icon-item:hover, .top-icons .icon-item:hover i { color:#1677ff; }
+
+    /* ── BOTTOM NAVBAR ──────────────────────────── */
+    .bottom-navbar { background:#fff; border-bottom:1px solid #e8e8e8; padding:0 24px; }
+    .bottom-navbar .nav-link { color:#333; font-size:0.88rem; font-weight:500; padding:12px 14px; white-space:nowrap; }
+    .bottom-navbar .nav-link:hover { color:#1677ff; }
+
+    /* ── BREADCRUMB ─────────────────────────────── */
+    .breadcrumb-bar {
+      background:#fff;
+      padding:12px 0;
+      border-bottom:1px solid #e8e8e8;
+    }
+    .breadcrumb {
+      margin:0;
+      padding:0;
+      background:transparent;
+    }
+    .breadcrumb-item {
+      font-size:0.85rem;
+    }
+    .breadcrumb-item a {
+      color:#1677ff;
+      text-decoration:none;
+    }
+    .breadcrumb-item.active {
+      color:#666;
+    }
+
+    /* ── SIDEBAR FILTERS ────────────────────────── */
+    .sidebar {
+      background:#fff;
+      border-radius:8px;
+      border:1px solid #e8e8e8;
+      padding:20px;
+    }
+    .filter-section {
+      margin-bottom:24px;
+      padding-bottom:20px;
+      border-bottom:1px solid #f0f0f0;
+    }
+    .filter-section:last-child {
+      border-bottom:none;
+      margin-bottom:0;
+    }
+    .filter-title {
+      font-size:0.95rem;
+      font-weight:700;
+      color:#222;
+      margin-bottom:14px;
+    }
+    .filter-option {
+      display:flex;
+      align-items:center;
+      gap:8px;
+      margin-bottom:10px;
+      cursor:pointer;
+    }
+    .filter-option input[type="checkbox"] {
+      width:16px;
+      height:16px;
+      cursor:pointer;
+    }
+    .filter-option label {
+      font-size:0.85rem;
+      color:#555;
+      cursor:pointer;
+      flex:1;
+    }
+    .filter-option .count {
+      font-size:0.75rem;
+      color:#999;
+    }
+    .star-rating {
+      display:flex;
+      align-items:center;
+      gap:4px;
+      margin-bottom:8px;
+      cursor:pointer;
+    }
+    .star-rating input[type="radio"] {
+      width:16px;
+      height:16px;
+    }
+    .star-rating .stars {
+      color:#ffa726;
+      font-size:0.8rem;
+    }
+
+    /* ── PRODUCT LISTING ────────────────────────── */
+    .listing-header {
+      background:#fff;
+      border-radius:8px;
+      border:1px solid #e8e8e8;
+      padding:16px 20px;
+      margin-bottom:16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .listing-header h5 {
+      font-size:1.1rem;
+      font-weight:700;
+      color:#222;
+      margin:0;
+    }
+    .listing-controls {
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .view-toggle {
+      display:flex;
+      gap:4px;
+    }
+    .view-toggle button {
+      background:#fff;
+      border:1.5px solid #e0e0e0;
+      padding:6px 12px;
+      cursor:pointer;
+      color:#666;
+      font-size:0.9rem;
+    }
+    .view-toggle button.active {
+      background:#1677ff;
+      color:#fff;
+      border-color:#1677ff;
+    }
+    .sort-select {
+      border:1.5px solid #e0e0e0;
+      border-radius:4px;
+      padding:6px 12px;
+      font-size:0.85rem;
+      outline:none;
+    }
+
+    .product-item {
+      background:#fff;
+      border:1px solid #e8e8e8;
+      border-radius:8px;
+      padding:16px;
+      margin-bottom:16px;
+      display:flex;
+      gap:16px;
+      transition:box-shadow 0.2s;
+    }
+    .product-item:hover {
+      box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    }
+    .product-image {
+      width:160px;
+      height:160px;
+      flex-shrink:0;
+      border-radius:6px;
+      overflow:hidden;
+      background:#f9f9f9;
+    }
+    .product-image img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .product-details {
+      flex:1;
+      display:flex;
+      flex-direction:column;
+    }
+    .product-title {
+      font-size:0.95rem;
+      font-weight:600;
+      color:#222;
+      margin-bottom:6px;
+      text-decoration:none;
+    }
+    .product-title:hover {
+      color:#1677ff;
+    }
+    .product-price {
+      font-size:1.25rem;
+      font-weight:700;
+      color:#e74c3c;
+      margin-bottom:8px;
+    }
+    .product-rating {
+      display:flex;
+      align-items:center;
+      gap:6px;
+      margin-bottom:8px;
+    }
+    .product-rating .stars {
+      color:#ffa726;
+      font-size:0.85rem;
+    }
+    .product-rating .count {
+      font-size:0.75rem;
+      color:#999;
+    }
+    .product-orders {
+      font-size:0.8rem;
+      color:#27ae60;
+      margin-bottom:8px;
+    }
+    .product-desc {
+      font-size:0.82rem;
+      color:#666;
+      line-height:1.5;
+      margin-bottom:10px;
+    }
+    .product-link {
+      font-size:0.8rem;
+      color:#1677ff;
+      text-decoration:none;
+    }
+    .product-actions {
+      display:flex;
+      align-items:center;
+      gap:8px;
+      margin-top:auto;
+    }
+    .btn-favorite {
+      background:#fff;
+      border:1.5px solid #e0e0e0;
+      width:36px;
+      height:36px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      color:#666;
+      font-size:1rem;
+    }
+    .btn-favorite:hover {
+      color:#e74c3c;
+      border-color:#e74c3c;
+    }
+
+    /* ── PAGINATION ─────────────────────────────── */
+    .pagination-wrapper {
+      background:#fff;
+      border-radius:8px;
+      border:1px solid #e8e8e8;
+      padding:20px;
+      text-align:center;
+    }
+    .pagination {
+      justify-content:center;
+      margin:0;
+    }
+    .page-link {
+      color:#666;
+      border:1px solid #e0e0e0;
+      padding:8px 14px;
+      margin:0 3px;
+      border-radius:4px;
+    }
+    .page-link:hover {
+      background:#f0f0f0;
+      color:#222;
+    }
+    .page-item.active .page-link {
+      background:#1677ff;
+      border-color:#1677ff;
+      color:#fff;
+    }
+
+    /* ── FOOTER ─────────────────────────────────── */
+    .footer {
+      background:#fff;
+      border-top:1px solid #e8e8e8;
+      padding:32px 0 20px;
+      margin-top:40px;
+    }
+    .footer-content {
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      flex-wrap:wrap;
+      gap:30px;
+    }
+    .footer-brand {
+      flex:1;
+      min-width:200px;
+    }
+    .footer-brand .logo-box {
+      background:#1677ff;
+      border-radius:10px;
+      width:38px;
+      height:38px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:18px;
+      margin-bottom:12px;
+    }
+    .footer-brand .brand-name {
+      font-size:1.2rem;
+      font-weight:700;
+      color:#1677ff;
+      margin-bottom:12px;
+      display:block;
+    }
+    .footer-brand p {
+      font-size:0.8rem;
+      color:#666;
+      line-height:1.5;
+      margin-bottom:12px;
+    }
+    .social-icons {
+      display:flex;
+      gap:10px;
+    }
+    .social-icons a {
+      width:32px;
+      height:32px;
+      background:#f0f0f0;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#666;
+      font-size:0.9rem;
+      text-decoration:none;
+    }
+    .social-icons a:hover {
+      background:#e0e0e0;
+      color:#1677ff;
+    }
+    .footer-links {
+      display:flex;
+      gap:50px;
+      flex:2;
+    }
+    .footer-column {
+      flex:1;
+      min-width:120px;
+    }
+    .footer-column h6 {
+      font-size:0.9rem;
+      font-weight:700;
+      color:#222;
+      margin-bottom:12px;
+    }
+    .footer-column ul {
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+    .footer-column ul li {
+      margin-bottom:8px;
+    }
+    .footer-column ul li a {
+      font-size:0.8rem;
+      color:#666;
+      text-decoration:none;
+    }
+    .footer-column ul li a:hover {
+      color:#1677ff;
+    }
+    .footer-apps {
+      flex:1;
+      min-width:200px;
+    }
+    .footer-apps h6 {
+      font-size:0.9rem;
+      font-weight:700;
+      color:#222;
+      margin-bottom:12px;
+    }
+    .app-badges {
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .app-badges img {
+      height:38px;
+      width:auto;
+    }
+    .footer-bottom {
+      border-top:1px solid #e8e8e8;
+      margin-top:24px;
+      padding-top:16px;
+      text-align:center;
+    }
+    .footer-bottom p {
+      font-size:0.75rem;
+      color:#888;
+      margin:0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════ TOP NAVBAR ══════════════════════ -->
+  <div class="top-navbar">
+    <div class="d-flex align-items-center">
+      <a href="#" class="d-flex align-items-center text-decoration-none" style="flex:1;">
+        <div class="logo-box"><i class="bi bi-bag-fill"></i></div>
+        <span class="brand-name">Brand</span>
+      </a>
+      <div class="search-wrapper mx-auto" style="flex:2; max-width:560px;">
+        <input type="text" placeholder="Search" />
+        <select class="category-select">
+          <option>All category</option>
+          <option>Electronics</option>
+        </select>
+        <button class="btn-search">Search</button>
+      </div>
+      <div class="top-icons" style="flex:1; justify-content:flex-end;">
+        <a href="#" class="icon-item"><i class="bi bi-person"></i><span>Profile</span></a>
+        <a href="#" class="icon-item"><i class="bi bi-chat-left-text"></i><span>Message</span></a>
+        <a href="#" class="icon-item"><i class="bi bi-heart"></i><span>Orders</span></a>
+        <a href="#" class="icon-item"><i class="bi bi-cart3"></i><span>My cart</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════ BOTTOM NAVBAR ══════════════════════ -->
+  <div class="bottom-navbar">
+    <div class="d-flex align-items-center">
+      <nav class="d-flex align-items-center">
+        <a href="#" class="nav-link">All category</a>
+        <a href="#" class="nav-link">Gadgets</a>
+        <a href="#" class="nav-link">Clothes</a>
+        <a href="#" class="nav-link">Accessories</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ══════════════════════ BREADCRUMB ══════════════════════ -->
+  <div class="breadcrumb-bar">
+    <div class="container-fluid px-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Clothings</a></li>
+          <li class="breadcrumb-item active">Men's wear</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ══════════════════════ MAIN CONTENT ══════════════════════ -->
+  <div class="container-fluid px-3 py-3">
+    <div class="row">
+
+      <!-- SIDEBAR FILTERS -->
+      <div class="col-lg-3">
+        <div class="sidebar">
+          
+          <!-- Category Filter -->
+          <div class="filter-section">
+            <div class="filter-title">Category</div>
+            <div class="filter-option">
+              <input type="checkbox" id="cat1" />
+              <label for="cat1">Mobile accessory</label>
+              <span class="count">120</span>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="cat2" />
+              <label for="cat2">Electronics</label>
+              <span class="count">89</span>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="cat3" />
+              <label for="cat3">Smartphones</label>
+              <span class="count">56</span>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="cat4" />
+              <label for="cat4">Modern tech</label>
+              <span class="count">42</span>
+            </div>
+          </div>
+
+          <!-- Brands Filter -->
+          <div class="filter-section">
+            <div class="filter-title">Brands</div>
+            <div class="filter-option">
+              <input type="checkbox" id="brand1" />
+              <label for="brand1">Samsung</label>
+              <span class="count">98</span>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="brand2" />
+              <label for="brand2">Apple</label>
+              <span class="count">77</span>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="brand3" />
+              <label for="brand3">Huawei</label>
+              <span class="count">54</span>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="brand4" />
+              <label for="brand4">Xiaomi</label>
+              <span class="count">38</span>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="brand5" />
+              <label for="brand5">OnePlus</label>
+              <span class="count">29</span>
+            </div>
+          </div>
+
+          <!-- Features Filter -->
+          <div class="filter-section">
+            <div class="filter-title">Features</div>
+            <div class="filter-option">
+              <input type="checkbox" id="feat1" />
+              <label for="feat1">Metallic</label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="feat2" />
+              <label for="feat2">Plastic cover</label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="feat3" />
+              <label for="feat3">8GB Ram</label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="feat4" />
+              <label for="feat4">Super power</label>
+            </div>
+          </div>
+
+          <!-- Price Range -->
+          <div class="filter-section">
+            <div class="filter-title">Price range</div>
+            <div class="filter-option">
+              <input type="radio" name="price" id="price1" />
+              <label for="price1">All</label>
+            </div>
+            <div class="filter-option">
+              <input type="radio" name="price" id="price2" />
+              <label for="price2">Under $20</label>
+            </div>
+            <div class="filter-option">
+              <input type="radio" name="price" id="price3" />
+              <label for="price3">$25 to $100</label>
+            </div>
+            <div class="filter-option">
+              <input type="radio" name="price" id="price4" />
+              <label for="price4">$100 to $300</label>
+            </div>
+            <div class="filter-option">
+              <input type="radio" name="price" id="price5" />
+              <label for="price5">$300 to $500</label>
+            </div>
+            <div class="filter-option">
+              <input type="radio" name="price" id="price6" />
+              <label for="price6">Over $500</label>
+            </div>
+          </div>
+
+          <!-- Condition -->
+          <div class="filter-section">
+            <div class="filter-title">Condition</div>
+            <div class="filter-option">
+              <input type="radio" name="condition" id="cond1" />
+              <label for="cond1">Any</label>
+            </div>
+            <div class="filter-option">
+              <input type="radio" name="condition" id="cond2" />
+              <label for="cond2">Refurbished</label>
+            </div>
+            <div class="filter-option">
+              <input type="radio" name="condition" id="cond3" />
+              <label for="cond3">Brand new</label>
+            </div>
+            <div class="filter-option">
+              <input type="radio" name="condition" id="cond4" />
+              <label for="cond4">Old items</label>
+            </div>
+          </div>
+
+          <!-- Rating -->
+          <div class="filter-section">
+            <div class="filter-title">Ratings</div>
+            <div class="star-rating">
+              <input type="checkbox" id="star5" />
+              <label for="star5" class="stars">★★★★★</label>
+            </div>
+            <div class="star-rating">
+              <input type="checkbox" id="star4" />
+              <label for="star4" class="stars">★★★★☆</label>
+            </div>
+            <div class="star-rating">
+              <input type="checkbox" id="star3" />
+              <label for="star3" class="stars">★★★☆☆</label>
+            </div>
+            <div class="star-rating">
+              <input type="checkbox" id="star2" />
+              <label for="star2" class="stars">★★☆☆☆</label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PRODUCT LISTING -->
+      <div class="col-lg-9">
+        
+        <!-- Listing Header -->
+        <div class="listing-header">
+          <h5>Mobile accessory</h5>
+          <div class="listing-controls">
+            <div class="view-toggle">
+              <button class="active"><i class="bi bi-grid-3x2-gap-fill"></i></button>
+              <button><i class="bi bi-list"></i></button>
+            </div>
+            <select class="sort-select">
+              <option>Featured</option>
+              <option>Newest</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Product Items -->
+        <div class="product-item">
+          <div class="product-image">
+            <img src="./assets/tech/1.jpg" alt="Phone"/>
+          </div>
+          <div class="product-details">
+            <a href="#" class="product-title">Canon Eos Rebel SL3 / EOS 250D 24.1 Megapixel</a>
+            <div class="product-price">$1128.00</div>
+            <div class="product-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="count">7,500</span>
+            </div>
+            <div class="product-orders">✓ 154 orders</div>
+            <p class="product-desc">
+              As for all of its camera products, the company's focus here is on advanced optics and automation to make
+              it easier to capture stunning images...
+            </p>
+            <a href="#" class="product-link">View details</a>
+          </div>
+          <div class="product-actions">
+            <button class="btn-favorite"><i class="bi bi-heart"></i></button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-image">
+            <img src="./assets/tech/7.jpg" alt="Laptop"/>
+          </div>
+          <div class="product-details">
+            <a href="#" class="product-title">GoPro HERO9 Black - Waterproof Action Camera</a>
+            <div class="product-price">$1128.00</div>
+            <div class="product-rating">
+              <span class="stars">★★★★★</span>
+              <span class="count">9,500</span>
+            </div>
+            <div class="product-orders">✓ 899 orders</div>
+            <p class="product-desc">
+              GoPro's most powerful, easy-to-use camera yet. Featuring a revolutionary new processor and upgraded sensor,
+              HERO9 Black delivers stunning image quality...
+            </p>
+            <a href="#" class="product-link">View details</a>
+          </div>
+          <div class="product-actions">
+            <button class="btn-favorite"><i class="bi bi-heart"></i></button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-image">
+            <img src="./assets/tech/8.jpg" alt="Watch"/>
+          </div>
+          <div class="product-details">
+            <a href="#" class="product-title">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</a>
+            <div class="product-price">$2,300.00</div>
+            <div class="product-rating">
+              <span class="stars">★★★★★</span>
+              <span class="count">12,300</span>
+            </div>
+            <div class="product-orders">✓ 2,500 orders</div>
+            <p class="product-desc">
+              The most advanced Apple Watch yet, featuring a larger, more advanced display. Includes advanced health sensors
+              and apps, plus new features...
+            </p>
+            <a href="#" class="product-link">View details</a>
+          </div>
+          <div class="product-actions">
+            <button class="btn-favorite"><i class="bi bi-heart"></i></button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-image">
+            <img src="./assets/tech/9.jpg" alt="Headphones"/>
+          </div>
+          <div class="product-details">
+            <a href="#" class="product-title">Sony WH-1000XM4 Wireless Noise Cancelling Headphones</a>
+            <div class="product-price">$349.99</div>
+            <div class="product-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="count">5,820</span>
+            </div>
+            <div class="product-orders">✓ 987 orders</div>
+            <p class="product-desc">
+              Industry-leading noise cancellation with Dual Noise Sensor technology. Next-level music with Edge-AI co-processor.
+              Up to 30-hour battery life...
+            </p>
+            <a href="#" class="product-link">View details</a>
+          </div>
+          <div class="product-actions">
+            <button class="btn-favorite"><i class="bi bi-heart"></i></button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-image">
+            <img src="./assets/tech/6.jpg" alt="Camera"/>
+          </div>
+          <div class="product-details">
+            <a href="#" class="product-title">Dell XPS 13 Laptop - 13.4-inch FHD+ Display</a>
+            <div class="product-price">$999.00</div>
+            <div class="product-rating">
+              <span class="stars">★★★★★</span>
+              <span class="count">3,200</span>
+            </div>
+            <div class="product-orders">✓ 654 orders</div>
+            <p class="product-desc">
+              The smallest 13-inch laptop has the biggest 13-inch screen. Go from dark to bright environments with ease.
+              The new InfinityEdge display...
+            </p>
+            <a href="#" class="product-link">View details</a>
+          </div>
+          <div class="product-actions">
+            <button class="btn-favorite"><i class="bi bi-heart"></i></button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-image">
+            <img src="./assets/interior/7.jpg" alt="Tablet"/>
+          </div>
+          <div class="product-details">
+            <a href="#" class="product-title">Samsung Galaxy Tab S8+ - 12.4" AMOLED Display</a>
+            <div class="product-price">$849.99</div>
+            <div class="product-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="count">4,100</span>
+            </div>
+            <div class="product-orders">✓ 432 orders</div>
+            <p class="product-desc">
+              Epic entertainment in your hands. Experience brilliant visuals with the stunning 12.4" AMOLED display.
+              Ultra-smooth 120Hz screen refresh rate...
+            </p>
+            <a href="#" class="product-link">View details</a>
+          </div>
+          <div class="product-actions">
+            <button class="btn-favorite"><i class="bi bi-heart"></i></button>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination-wrapper">
+          <p style="font-size:0.85rem; color:#666; margin-bottom:16px;">
+            Showing 10 of 123 results
+          </p>
+          <nav>
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a>
+              </li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════ FOOTER ══════════════════════ -->
+  <div class="footer">
+    <div class="container-fluid px-3">
+      <div class="footer-content">
+        
+        <!-- Brand Section -->
+        <div class="footer-brand">
+          <div class="d-flex align-items-center mb-3">
+            <div class="logo-box"><i class="bi bi-bag-fill"></i></div>
+            <span class="brand-name" style="margin-left:8px; margin-bottom:0;">Brand</span>
+          </div>
+          <p>Best information about the company goes here but now lorem ipsum is</p>
+          <div class="social-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="footer-links">
+          <div class="footer-column">
+            <h6>About</h6>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Find store</a></li>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h6>Partnership</h6>
+            <ul>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Find store</a></li>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h6>Information</h6>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Money Refund</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h6>For users</h6>
+            <ul>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Register</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">My Orders</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- App Download -->
+        <div class="footer-apps">
+          <h6>Get app</h6>
+          <div class="app-badges">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/320px-Download_on_the_App_Store_Badge.svg.png" alt="App Store"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/320px-Google_Play_Store_badge_EN.svg.png" alt="Google Play"/>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>© 2023 Ecommerce. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
